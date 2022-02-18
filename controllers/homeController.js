@@ -28,6 +28,7 @@ places.post('/', (req, res) => {
 	  }
 	})
   })
+  
 
 //   let placeFoundById = []
 // // Add ID as a parameter to the route    (/:id/:date)
@@ -42,6 +43,23 @@ places.post('/', (req, res) => {
 // 	  }
 // 	}
 //   })
+
+
+places.delete('/:id', (req, res) => {
+	Place.findByIdAndDelete(req.params.id, (error, deletedPlan) => {
+		if (error) {
+			res.status(400).json({error: error.message})
+		} else if (deletedPlan === null) {
+			res.status(404).json({message: 'Plan not found'})
+		} else {
+			res.status(200).json({message: 'Plan with ID: ' + req.params.id} + ' ..DELETED')
+		}
+	})
+})
+
+
+
+
 
 
 
