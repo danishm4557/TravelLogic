@@ -17,7 +17,7 @@ const MONGODB_URI = process.env.MONGODB_URI
 
 //////////////////////// SET UP API KEY //////////////////////////
 const baseUrl = ""
-const apiKey = process.env.APIKEY
+// const apiKey = process.env.APIKEY
 //////////////////////////////////////////////////////////////////
 
 
