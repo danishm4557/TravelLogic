@@ -27,7 +27,7 @@ const apiKey = process.env.APIKEY
 
 
 ///////////////////// SET UP CORS MIDDLEWARE//////////////////////
-const allowedList = ['http://localhost:3000', 'Heroku Front End']
+const allowedList = ['http://localhost:3000', 'https://travel-logic-frontend.herokuapp.com']
 const corsOptions = {
 	origin: (origin, callback) => {
 		if(allowedList.indexOf(origin) !== -1 || !origin) {
