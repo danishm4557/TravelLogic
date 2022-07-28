@@ -2,8 +2,8 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
-const PORT = process.env.PORT    // TO TEST LIVE
-// const PORT = 8000             // TO TEST LOCALLY
+// const PORT = process.env.PORT    // TO TEST LIVE
+const PORT = 8000             // TO TEST LOCALLY
 const mongoose = require('mongoose')
 const cors = require('cors')
 const session = require('express-session')
